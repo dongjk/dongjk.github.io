@@ -20,6 +20,7 @@ below formula is come from maximum like hood part, chapter 5, deeplearning book:
 $$
 \underset{\theta}{\arg \max} \prod_{i=1}^m P_{model}(x^{(i)};\theta)
 $$
+
 In this fomula, argmax will return $\theta$, which are weights when probability in learning mode is the maximum, here arg are $x^{(i)}$ and $\theta$, function is product of $P_{model}$
 
 An other example, language translation section in sequence models of coursera deep leraning course, 

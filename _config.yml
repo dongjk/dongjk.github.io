@@ -23,7 +23,7 @@ twitter_username: hikihomori
 github_username:  dongjk
 
 # Build settings
-markdown: redcarpet
+markdown: maruku
 theme: minima
 plugins:
   - jekyll-feed
