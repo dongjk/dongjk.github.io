@@ -30,6 +30,4 @@ $$
 
 Here $x$ is sentance before translate, $y$ is sentence after translate, $y^{<t>}$ is every word in it, e.g, we want translate `没有母牛关` to `there is no cow level`, $x$ is `没有母牛关`, $y$ is `there is no cow level` and $y^{<1>}$ is `there`, $y^{<2>}$ is `is`, $y^{<3>}$ is `no`, etc.
 
-这里的argmax要返回一个句子,这个句子要使函数$\prod P$最大, 而这个h函数模型就是基于已有句子`there is no cow level`和已经翻译的部分情况下,找一个字满足最大的概率,比如已翻译部分是`没有母`那么下一个字是`牛`的概率$P(y^{<4>}|x,y^{<1>},y^{<2>},y^{<3>})$最大, 每个字的概率最大, 乘起来也是最大, 所以最终得到$y$为`没有母牛关`
-
 In this example, argmax will return a sentence, which make function $\prod P$ maximum, this function is ask probability of next word with given sentence and alread tranlated part, e.g given sentence `没有母牛关` and already tranlated part like `there is no`, word `cow` will make probability $P(y^{<4>}|x,y^{<1>},y^{<2>},y^{<3>})$ maximum, and if every word have maximum probability, the product of those will be maximum, and finally get `there is no cow level`.
