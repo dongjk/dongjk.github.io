@@ -8,11 +8,10 @@ categories: math symbol tips
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which 
 
 $$
-\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
-$$
-$$
 \underset{\theta}{\arg \max} \prod_{i=1}^m P_{model}(x^{(i)};\theta)
 $$
+
+
 $$
 \underset{y}{\arg \max} \prod_{t=1}^{T_y} P(y^{<t>}|x,y^{<1>},...,y^{<t-1>})
 $$
