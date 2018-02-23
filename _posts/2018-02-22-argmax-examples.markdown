@@ -29,6 +29,6 @@ $$
 \underset{y}{\arg \max} \prod_{t=1}^{T_y} P(y^{<t>}|x,y^{<1>},...,y^{<t-1>})
 $$
 
-Here $x$ is sentance before translate, $y$ is sentence after translate, $y^{<t>}$ is every word in it, e.g, we want translate `没有母牛关` to `there is no cow level`, $x$ is `没有母牛关`, $y$ is `there is no cow level` and $y^{<1>}$ is `there`, $y^{<2>}$ is `is`, $y^{<3>}$ is `no`, etc.
+Here $x$ is sentance before translate, $y$ is sentence after translate, $y^{\<t\>}$ is every word in it, e.g, we want translate `没有母牛关` to `there is no cow level`, $x$ is `没有母牛关`, $y$ is `there is no cow level` and $y^{<1>}$ is `there`, $y^{<2>}$ is `is`, $y^{<3>}$ is `no`, etc.
 
-In this example, argmax will return a sentence, which make function $\prod P$ maximum, this function is ask probability of next word with given sentence and alread tranlated part, e.g given sentence `没有母牛关` and already tranlated part like `there is no`, word `cow` will make probability $P(y^{<4>}|x,y^{<1>},y^{<2>},y^{<3>})$ maximum, and if every word have maximum probability, the product of those will be maximum, and finally get `there is no cow level`.
+In this example, argmax will return a sentence, which make function $\prod P$ maximum, this function is ask probability of next word with given sentence and alread tranlated part, e.g given sentence `没有母牛关` and already tranlated part like `there is no`, word `cow` will make probability $P(y^{<4>}\|x,y^{<1>},y^{<2>},y^{<3>})$ maximum, and if every word have maximum probability, the product of those will be maximum, and finally get `there is no cow level`.
