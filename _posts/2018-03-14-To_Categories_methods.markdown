@@ -81,5 +81,5 @@ use `keras.utils.to_categorical` to convert integer sequence to one hot.
 to_categorical(encoder_seq[start:end], ENCODER_TOKEN_LENGTH + 1)
 {% endhighlight %}
 
-because this is no `0`, but category will contains `-`, so here need add 1 for 
+because there is no `0` index, but category will contains it, so here need add 1 for 
 the lenth.
