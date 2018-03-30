@@ -5,7 +5,7 @@ date:  2018-03-29 21:25:50 +0800
 categories: math numpy
 ---
 
-Axis在Numpy库的array操作中起了非常关键的作用, 它用于指示一个array(或者说tersor)的维度.
+Axis在Numpy库的array操作中起了非常关键的作用, 它用于指示一个array(或者说tensor)的维度.
 
 例如: 一个array的shape是(2,4,6), 那么第一个维度也就是axis=0对应的是shape 2, 第二个维度axis=1对应的是shape 4, 以此类推, 另外为了方便, axis=-1是值得倒数第一个维度.
 
