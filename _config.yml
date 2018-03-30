@@ -16,12 +16,10 @@
 title: Notes for machine learning
 email: hikihomori at gmail
 description: >- # this means to ignore newlines until "baseurl:"
-  Notes for machine learning and math
-  
   All the text, images and other content being part of this Blog is property of the Author, 
-  unless noted otherwise. All logos and trademarks are property of their respective owners. 
-  You are not allowed to reproduce, sell, or modify any part of this Blog. You are welcome 
-  to link to this blog。
+  unless noted otherwise. You are not allowed to reproduce, sell, or modify any part of this Blog. 
+  You are welcome to link to this blog.
+
   本博客内容包括文字，图像，视频均为非营利性原创，未经允许，禁止转载。
   本人保留所有法定权利。违者必究。
 baseurl: "" # the subpath of your site, e.g. /blog
