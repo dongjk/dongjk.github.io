@@ -65,7 +65,7 @@ Use the Dense layer as example, `build()` function doing something like:
 it create a weight for Dense layer. and for upper example, we can see the weight are used by dot product with input tensor.
 
 
-###Container
+### Container
 OK, now we have a layer with input tensor and output tensor, when we chain many layers together, and call the Model function API
 {% highlight python %},
 model = Model(inputs=[a1, a2], outputs=[b1, b2, b3])
