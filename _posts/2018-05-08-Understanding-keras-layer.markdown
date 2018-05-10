@@ -79,4 +79,4 @@ several points container have:
 3. input size is flexible
 
 ### Conclude
-It's not complex to read keras source code, and the design is clear, concept behind it it very simple, but this make the powerful high level interface to build many kind of neural networks.
+It's not complex to read keras source code, and the design is clear, concept behind it is very simple, but this make the powerful high level interface to build many kind of neural networks.
