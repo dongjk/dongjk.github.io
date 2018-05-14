@@ -6,9 +6,10 @@ categories: math numpy
 ---
 
 
-Axis play a key in Numpy array operations,
-it indicate the dimension of an array(or a tensor), for example, if an array have shape (2,4,6)
-first dimension is axis=0 coresponding to shape 2, second dimension is axis=1 coresponding to shape 4, etc, and for the convience, Numpy also can use axis=-1 to indicate the last dimension.
+Axis play a key role in Numpy array operations,
+it indicate the dimension of an array(or a tensor), for example, if an array have shape (2,4,6),
+
+the first dimension is axis=0 coresponding to shape 2, second dimension is axis=1 coresponding to shape 4, etc, and for the convience, Numpy also can use axis=-1 to indicate the last dimension.
 
 I made an animation for intuiation.
 
