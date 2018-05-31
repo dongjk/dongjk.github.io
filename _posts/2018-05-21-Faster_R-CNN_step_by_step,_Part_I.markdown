@@ -9,9 +9,9 @@ Faster R-CNN is a good point to learn R-CNN family, before it there have R-CNN
 and Fast R-CNN, after it there have Mask R-CNN. 
 
 In this post, I will implement Faster R-CNN step by step in keras, build a trainable model, and dive into the details of 
-all trick part.
+all tricky part.
 
-Before start, I suppose you already known some convolution neural network, 
+Before start, I suppose you already known some convolutional neural network, 
 objection detection and keras basics.
 
 ## Overview
@@ -135,6 +135,7 @@ all_anchors = (base_anchors.reshape((1, 9, 4)) +
                 shifts.reshape((1, num_feature_map, 4)).transpose((1, 0, 2)))
 {% endhighlight %}
 ![]({{ site.url }}/assets/article_images/2018-05-21-Faster_R-CNN_step_by_step/all_anchors.jpg){:height="75%" width="75%"}
+
 there are huge number of anchors.
 
 #### remove anchors not inside image.
