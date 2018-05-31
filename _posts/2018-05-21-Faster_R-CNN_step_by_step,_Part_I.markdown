@@ -25,7 +25,7 @@ I will break down this post to several sections.
 3. Loss function.
 4. Use trained RPN to predict proposals.
 
-the code in this post can be found in link, some code are copied form [rbg's implementation](https://github.com/rbgirshick/py-faster-rcnn) and [broadinstitute/keras-rcnn](https://github.com/broadinstitute/keras-rcnn.
+the code in this post can be found in [this link](https://github.com/dongjk/faster_rcnn_keras), some code are copied form [rbg's implementation](https://github.com/rbgirshick/py-faster-rcnn) and [broadinstitute/keras-rcnn](https://github.com/broadinstitute/keras-rcnn).
 
 ## RPN model
 RPN is stand for **Region Proposal Network**. When I first learn Faster R-CNN, this RPN conception sounds very difficult to me, there have a lot of trick things like feature map, anchors, etc, but actually RPN is just another simple neural network, we can see how simple this network is, the implementation look like below.
