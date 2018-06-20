@@ -73,14 +73,14 @@ The second output have 4*9 units, which represent the bounding boxes of anchors,
 
 ## Training data produce
 Now we have an intuition about RPN model and it's input and output, but how to prepare training data?
-This is probably the most trick part of RPM.
+This is probably the most tricky part of RPN.
 
 Let us recall classical image classification model, we usually scale several images to same size and feed them as a mini-batch to model, and expect a category output. In RPN it is different, no need scale image, and no multi image one batch, it will produce a batch of training data base on **a single image**, this is called _“image-centric” sampling strategy_.
 
 In [rbg's implementation](https://github.com/rbgirshick/py-faster-rcnn), he feed an image feature map to model and there have a _anchor_target_layer_ to break that image down to many data, and then randomly choose 256 data to form a mini-batch.
 In this article, I will split image feature map and form mini-batch firstly and feed to model, the trick part is then move from model training phase to data preprocessing phase. I will use one image from ILSVRC2014 to show how to break down image into a mini batch of data, and train RPN model.
 
-the image have shape (233, 500, 3) and two ground truth boxes.
+the image have shape (333, 500, 3) and two ground truth boxes.
 
 ![]({{ site.url }}/assets/article_images/2018-05-21-Faster_R-CNN_step_by_step/gt_boxes.jpg){:height="75%" width="75%"}
 
@@ -92,17 +92,17 @@ pretrained_model = InceptionResNetV2(include_top=False)
 feature_map=pretrained_model.predict(x)
 {% endhighlight %}
 
-by feeding the 233x500 image, we have a **1st layer feature map** with shape (9, 14, 1532). the **2nd layer feature map** have same shape.
+by feeding the 333x500 image, we have a **1st layer feature map** with shape (9, 14, 1532). the **2nd layer feature map** have same shape.
 
 #### calculate stride
-With the feature map, we can calculate the overall stride between feature map with shape (9, 14, 1532) and original image with shape (233, 500, 3)
+With the feature map, we can calculate the overall stride between feature map with shape (9, 14, 1532) and original image with shape (333, 500, 3)
 
 {% highlight python %}
 w_stride = img_width / width
 h_stride = img_height / height
 {% endhighlight %}
 
-In Faster R-CNN paper, the pre-trained model is VGG16 and the stride is (16, 16), here because we are using InceptionResNetV2, the stride for height and width is not fixed and will change from image to image, for this 233x500 image, we have stride (37, 35.7).
+In Faster R-CNN paper, the pre-trained model is VGG16 and the stride is (16, 16), here because we are using InceptionResNetV2, the stride for height and width is not fixed and will change from image to image, for this 333x500 image, we have stride (37, 35.7).
 
 With the stride, we can split original image into many tiles.
 
