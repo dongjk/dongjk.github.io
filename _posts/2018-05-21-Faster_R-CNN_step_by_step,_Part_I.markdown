@@ -229,4 +229,4 @@ model.fit(np.asarray(batch_tiles), [batch_label_targets,batch_bbox_targets], epo
 ## Predict proposal region
 RPN is used separately to propose regions, feed an any size image to RPN, it will generate height\*width\*9 outputs, each output have two siblings, one is score between [0,1] represent probability of fg/bg, and another is 4 transformed values, we need do some work to process this output to bounding box proposals.
 
-In the next part, let's see how the use RPN predict result to do the real object detection task.
+In the [next part](https://dongjk.github.io/code/object+detection/keras/2018/06/10/Faster_R-CNN_step_by_step,_Part_II.html), let's see how the use RPN predict result to do the real object detection task.
